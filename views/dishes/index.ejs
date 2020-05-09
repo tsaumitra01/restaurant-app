@@ -1,0 +1,30 @@
+<%- include("../partials/header"); %>
+        <div class="container">
+            <header class="jumbotron">
+                <div class="container">
+                    <h1 id="h1">Dishes </h1>
+                    <!-- <h4 id="h3">We serve you the best because you deserve the best</h4> -->
+                    </br>
+                    <p>
+                        <a href="/dishes/new" class="btn btn-primary btn-lg" >Add New Dishes</a>
+                    </p>
+                    <br/>
+                </div>
+            </header>
+            <div class="row text-center">
+                <% dishes.forEach(function(dish){ %>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="<%= dish.image %>" alt="">
+                            <div class="caption">
+                                <%= dish.name %>
+                            </div>
+                            <p>
+                                <a href="/dishes/<%=  dish._id %>" class="btn btn-primary">More Info</a>
+                            </p>
+                        </div>
+                    </div>
+                <% });  %>
+            </div>
+        </div>
+<%- include("../partials/footer"); %>

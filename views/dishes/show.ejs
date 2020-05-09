@@ -1,0 +1,11 @@
+<%- include("../partials/header"); %>
+        <h1> <%= dish.name %></h1>
+        <img src="<%= dish.image %>" alt="">
+        <p>
+            <%= dish.description %>
+        </p>
+        <a href="/dishes/<%= dish._id %>/comments/new" class="btn btn-primary ">Add Comment</a>
+        <% dish.comments.forEach(function(comment){ %>
+            <p><strong><%= comment.author    %></strong>- <%= comment.text %></p>
+        <% }); %> 
+<%- include("../partials/footer"); %>

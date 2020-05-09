@@ -1,0 +1,8 @@
+<%- include("../partials/header"); %>
+        <form action="/dishes/<%= dish._id%>/comments " method="POST">
+            <input type="text" name="comment[text]" placeholder="text">
+            <input type="text" name="comment[author]" value="<%= currentUser.username%>">
+            <button class="btn btn-primary">Submit</button> 
+        </form>
+    
+<%- include("../partials/footer"); %>

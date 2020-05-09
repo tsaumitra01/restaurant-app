@@ -1,0 +1,9 @@
+<%- include("../partials/header"); %>
+<h1>Add New Dish</h1>
+<form action="/dishes" method="POST">
+    <input type="text" name="dish[name]" id="" placeholder="name">
+    <input type="text" name="dish[image]" id="" placeholder="image url">
+    <input type="text" name="dish[description]" id="" placeholder="description">
+    <button>Submit</button>
+</form>
+<%- include("../partials/footer"); %>
